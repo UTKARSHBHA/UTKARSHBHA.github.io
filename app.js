@@ -36,3 +36,18 @@ function navCheck(entries){
 sections.forEach(section =>{
   observer.observe(section);
 });
+
+
+
+// burger
+const hamburger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav_items");
+const links = document.querySelectorAll(".nav_items li");
+hamburger.addEventListener('click', ()=>{//Animate Links
+navLinks.classList.toggle("open");
+links.forEach(link => {
+link.classList.toggle("fade");
+});
+//Hamburger Animation
+hamburger.classList.toggle("toggle");
+});

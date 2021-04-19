@@ -14,7 +14,11 @@ html {
   scroll-behavior: smooth;
 }
 /* Navbar */
-
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
 li,
 a,
 button {
@@ -25,18 +29,17 @@ button {
   font-size: 1.1rem;
   font-weight: bold;
 }
-.navbar {
+nav {
+  height: 10vh;
   width: 100vw;
-
   background-color: white;
-
+  box-shadow: 0 3px 10px #3d78023a;
   display: flex;
+  position: fixed;
+  z-index: 2;
   justify-content: flex-end;
   align-items: center;
   padding: 20px 10%;
-  position: fixed;
-  z-index: 2;
-  box-shadow: 0 3px 10px #3d78023a;
 }
 .logo {
   color: #394210;
@@ -44,15 +47,29 @@ button {
   margin-right: auto;
   font-size: 1.5rem;
 }
-
-.nav_items li {
-  display: inline-block;
+.nav_items {
+  /* position: relative; */
+  display: flex;
+  list-style: none;
+  width: 88vw;
+  /* padding: 0 0.7vw; */
+  justify-content: flex-end;
+  align-items: center;
+  text-transform: uppercase;
+  height: 100%;
 }
+.nav_items li {
+  position: relative;
+}
+
+/* .nav_items li {
+  display: inline-block;
+} */
 .bubble {
   position: absolute;
   z-index: -2;
   background: #aee972;
-  /* transform: scale(2); */
+  transform: scale(1.5);
   transition: all 0.5s ease;
 }
 
@@ -65,6 +82,7 @@ button {
   height: 2px;
   background-color: black;
   margin: 4px;
+  transition: all 0.3s ease;
 }
 /* .nav_items li a {
   position: relative;
@@ -100,7 +118,7 @@ button {
   padding: 182px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
 
   background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(assets/pics/nav_flip.jpg);
@@ -113,9 +131,10 @@ button {
 }
 .container h1,
 .container p {
-  width: 50%;
   font-size: 4rem;
-  padding-bottom: 20px;
+  width: 50%;
+
+  /* margin-bottom: 20px; */
 }
 .container p {
   padding-left: 10px;
@@ -127,31 +146,11 @@ button {
 .container-buttons {
   display: flex;
   flex-direction: row;
-
-  /* justify-content: ; */
 }
-/* .btn2,
-.btn3 {
-  width: 230px;
-  margin-top: 30px;
-  margin-left: 20px;
-  padding: 9px 25px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-}
-.container .container-buttons .btn3 {
-  background-color: #737373;
-  color: white;
-} */
-/* .box-1 { background-color: #FF6766; }
-.box-2 { background-color: #3C3C3C; }
-.box-3 { background-color: #66A182; } */
 
 .btn {
   width: 230px;
   margin-top: 30px;
-  /* margin-left: 20px; */
 
   border: none;
   line-height: 50px;
@@ -189,7 +188,6 @@ button {
   transform: scale(0.1, 1);
 }
 .btn-one:hover span {
-  /* color: ; */
   letter-spacing: 2px;
 }
 .btn-one:hover::before {
@@ -249,36 +247,58 @@ button {
   transform: scale(1, 1);
 }
 
-/* .ml9 {
+/* .heros {
+  display: block;
+} */
+.container h1 {
+  display: block;
+  width: fit-content;
   position: relative;
-  font-weight: 200;
-  font-size: 4em;
+  color: transparent;
+  animation: text_reveal 0.5s ease forwards;
+  animation-delay: 1.5s;
 }
 
-.ml9 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
+.container h1:nth-child(1) {
+  animation-delay: 1.5s;
+}
+.container h1:nth-child(2) {
+  animation-delay: 2.5s;
 }
 
-.ml9 .letter {
-  transform-origin: 50% 100%;
-  display: inline-block;
-  line-height: 1em;
-} */
-/* span {
-  opacity: 0;
-  transition: all 1s ease;
-  transform: translateY(50px);
-  display: inline-block;
+.container h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #aee972c4;
+  animation: text_reveal_box 1s ease;
+  animation-delay: 1s;
 }
-span.fade {
-  opacity: 1;
-  transform: translateY(0px);
-} */
+.container h1:nth-child(1) span {
+  animation-delay: 1s;
+}
+.container h1:nth-child(2) span {
+  animation-delay: 2s;
+}
+
+@keyframes text_reveal_box {
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes text_reveal {
+  100% {
+    color: black;
+  }
+}
 
 /* About  */
 .about {
@@ -476,7 +496,7 @@ span.fade {
   padding: 20px;
 }
 
-/* Responsible design */
+/* Responsive design */
 
 @media screen and (max-width: 1220px) {
   li,
@@ -488,9 +508,7 @@ span.fade {
   .navbar {
     padding: 20px 5%;
   }
-  /* .nav_items li {
-    padding: 0;
-  } */
+
   .container,
   .about,
   .services,
@@ -524,16 +542,87 @@ span.fade {
   /* body {
     overflow-x: hidden;
   } */
-  .nav_items {
+  /* .line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+  } */
+
+  nav {
+    position: fixed;
+    z-index: 3;
+  }
+  .burger {
+    display: block;
     position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: white;
-    display: flex;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7 ease;
+  }
+  .nav_items {
+    position: fixed;
+    background: lawngreen;
+    height: 100vh;
+    width: 100%;
     flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    pointer-events: none;
+    transition: all 1s ease-out;
+    /* z-index: 3; */
+
     align-items: center;
-    width: 30%;
-    transform: translateX(100%);
+  }
+  .nav-items.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .landing {
+    flex-direction: column;
+  }
+  .nav_items li {
+    opacity: 0;
+  }
+  .nav_items li a {
+    font-size: 25px;
+  }
+  .nav_items li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav_items li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav_items li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav_items li:nth-child(4) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav_items li:nth-child(5) {
+    transition: all 0.5s ease 1s;
+  }
+  .nav_items li:nth-child(6) {
+    transition: all 0.5s ease 1.2s;
+  }
+  .nav_items li:nth-child(7) {
+    transition: all 0.5s ease 1.4s;
+  }
+  li.fade {
+    opacity: 1;
+  }
+  .toggle.line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle.line2 {
+    transition: all 0.7 ease;
+    width: 0;
+  }
+  .toggle.line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }

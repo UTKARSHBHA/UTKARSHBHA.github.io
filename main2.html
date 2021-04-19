@@ -4,26 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/1d996206a4.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="style2.css" />
+    <title>Portfolio</title>
   </head>
-
   <body>
     <header>
       <nav class="navbar">
         <div class="logo">
           <h3>PORTFOLIO</h3>
         </div>
-        <div class="burger">
+        <div class="hamburger">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
         </div>
-        <ul class="nav_items">
+        <ul class="nav-links">
           <li class="item">
             <a data-page="container" href="#container">Home</a>
           </li>
@@ -48,9 +43,11 @@
       </nav>
     </header>
     <section data-index="0" class="container" id="container">
-      <div class="introAnimation">
-        <h1>Hi,&nbsp;I&#39;m <span></span></h1>
-        <h1>Utkarsh &nbsp;Bhardwaj <span></span></h1>
+      <div class="introBox">
+        <div class="introAnimation">
+          <h1>Hi,&nbsp;I&#39;m</h1>
+          <h1>Utkarsh &nbsp;Bhardwaj</h1>
+        </div>
       </div>
       <p>
         A fast learner, self-driven, quick starter, passionate programmer with a
@@ -59,10 +56,21 @@
       </p>
       <div class="container-buttons">
         <a href="#about"
-          ><button class="btn btn-one"><span>Read More</span></button></a
+          ><button class="btn btn-one">
+            <!-- <svg
+              width="170px"
+              height="50px"
+              viewBox="0 0 170 50"
+              class="border"
+            >
+              <polyline points="169,1 169,49 1,49 1,1 169,1" class="bg-line" />
+              <polyline points="169,1 169,49 1,49 1,1 169,1" class="hl-line" />
+            </svg> -->
+            <span>Read More</span>
+          </button></a
         >
         <a href="#contact"
-          ><button class="btn btn-three"><span>Contact Me</span></button></a
+          ><button class="btn btn-two"><span>Contact Me</span></button></a
         >
       </div>
     </section>
@@ -85,7 +93,7 @@
       </div>
     </section>
     <section data-index="2" class="projects" id="projects">
-      <h1>Projects</h1>
+      <h2>Projects</h>
       <div class="project-grid">
         <div class="pic1">
           <img
@@ -94,7 +102,7 @@
           />
         </div>
         <div class="info1">
-          <h2>Project Name</h2>
+          <h3>Project Name</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim soluta
             aspernatur molestias sequi. Officiis voluptate ea doloribus animi
@@ -109,7 +117,7 @@
           />
         </div>
         <div class="info1">
-          <h2>Project Name</h2>
+          <h3>Project Name</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
             minus voluptates veritatis magnam id nobis officia quisquam dolor
@@ -124,7 +132,7 @@
           />
         </div>
         <div class="info1">
-          <h2>Project Name</h2>
+          <h3>Project Name</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
             maiores voluptatum molestiae! Tempora quae quaerat similique at quo
@@ -135,47 +143,47 @@
       </div>
     </section>
     <section data-index="3" class="skills" id="skills">
-      <h1>Skills</h1>
+      <h2>Skills</h2>
       <div class="skill-flex">
         <div class="skill-pic">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png"
             alt=""
           />
-          <h2>Python</h2>
+          <h3>Python</h3>
         </div>
         <div class="skill-pic">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png"
             alt=""
           />
-          <h2>Python</h2>
+          <h3>Python</h3>
         </div>
         <div class="skill-pic">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png"
             alt=""
           />
-          <h2>Python</h2>
+          <h3>Python</h3>
         </div>
         <div class="skill-pic">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png"
             alt=""
           />
-          <h2>Python</h2>
+          <h3>Python</h3>
         </div>
         <div class="skill-pic">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/768px-Python-logo-notext.svg.png"
             alt=""
           />
-          <h2>Python</h2>
+          <h3>Python</h3>
         </div>
       </div>
     </section>
     <section data-index="4" class="education" id="education">
-      <h1>Education</h1>
+      <h2>Education</h2>
       <div class="seperator-flex">
         <div class="course">
           <div class="course-name">
@@ -242,7 +250,7 @@
 
     <section data-index="5" class="message" id="contact">
       <div class="message-text">
-        <h1>Contact</h1>
+        <h2>Contact</h2>
         <div class="con-info">
           <i class="fas fa-phone-alt"></i>
           <a href="">9457154813</a>
@@ -291,6 +299,6 @@
         </form>
       </div>
     </section>
-    <script src="app.js"></script>
+    <script src="app2.js"></script>
   </body>
 </html>
