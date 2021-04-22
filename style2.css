@@ -72,6 +72,7 @@ nav {
   text-transform: uppercase;
 }
 .nav-links li a {
+  /* color: black; */
   text-decoration: none;
   margin: 0 0.7vw;
 }
@@ -113,8 +114,7 @@ nav {
   flex-direction: column;
   justify-content: center;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)),
-    url(assets/pics/nav_flip.jpg);
+  background: url(assets/pics/nav_flip.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -147,7 +147,7 @@ nav {
 }
 .introAnimation {
   background: 50% 100% / 50% 50% no-repeat
-    radial-gradient(ellipse at bottom, #9ef01a, transparent, transparent);
+    radial-gradient(ellipse at bottom, #008000, transparent, transparent);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -157,7 +157,7 @@ nav {
 }
 @keyframes glow {
   40% {
-    text-shadow: 0 0 8px #fff;
+    text-shadow: 0 0 8px #9ef01a;
   }
 }
 @keyframes reveal {
@@ -176,9 +176,9 @@ nav {
   height: 50px;
   cursor: pointer;
   background: transparent;
-  border: 1px solid #70e000;
+  border: 1px solid #38b000;
   outline: none;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 /* svg {
@@ -193,18 +193,21 @@ nav {
 } */
 
 .btn-one:hover {
-  transition: 1s ease-in-out;
   background: #70e0009d;
 }
-
-.btn-one:hover svg {
-  stroke-dashoffset: -480;
+.btn-one:hover span {
+  color: white;
 }
+/* .btn-one:hover svg {
+  stroke-dashoffset: -480;
+} */
 
 .btn-one span {
-  color: white;
+  transition: 0.5s ease-in-out;
+  text-transform: uppercase;
+  color: #38b000;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: bold;
 }
 
 .btn-two {
@@ -217,10 +220,10 @@ nav {
 
   color: white;
   background: #70e000;
-  background: linear-gradient(90deg, #70e000 0%, #9ef01a 100%);
+  background: linear-gradient(90deg, #38b000 0%, #70e000 100%);
   border: none;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px #ccff3362;
+  box-shadow: 12px 12px 24px #ccff3338;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
@@ -233,7 +236,7 @@ nav {
   border-radius: 1000px;
   min-width: calc(170px + 10px);
   min-height: calc(50px + 10px);
-  border: 4px solid #9ef01a;
+  border: 4px solid #70e000;
   box-shadow: 0 0 60px #9ef01a96;
   position: absolute;
   top: 50%;
@@ -247,7 +250,7 @@ nav {
 .btn-two:hover,
 .btn-two:focus {
   font-weight: bold;
-  color: grey;
+  color: white;
 }
 
 .btn-two:hover::before,
@@ -312,6 +315,25 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+.project-grid img {
+  width: 30vw;
+}
+/* .pic1 :hover {
+  width: 31vw;
+  transition: all 0.5 ease;
+} */
+
+.pic1 img {
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.pic1:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
 .project-grid .info1,
 .pic1 {
   padding: 10%;
@@ -321,6 +343,7 @@ nav {
   font-size: 2rem;
   padding: 40px;
 } */
+
 /* Skills */
 .skills {
   padding: 182px;
@@ -333,7 +356,8 @@ nav {
   text-align: center;
 }
 .skill-pic img {
-  max-width: 120px;
+  width: 120px;
+  /* height: 120px; */
 }
 /* .skills h1 {
   font-size: 3rem;
