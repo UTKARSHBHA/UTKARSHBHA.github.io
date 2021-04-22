@@ -412,10 +412,10 @@ nav {
   justify-content: space-evenly;
   width: 40%;
 }
-.cer-pic {
+/* .cer-pic {
   background-size: cover;
-}
-.cer-pic img {
+} */
+.certificates img {
   width: 80%;
 }
 
@@ -429,6 +429,21 @@ nav {
 
   display: flex;
   padding: 182px;
+}
+.message a {
+  color: #4d4d4d;
+  margin-left: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.message i {
+  transition: all 0.3s ease-in-out;
+  color: #4d4d4d;
+}
+.con-info:hover a {
+  color: #38b000;
+}
+.con-info:hover i {
+  color: #38b000;
 }
 .message .message-text {
   padding: 40px;
@@ -445,7 +460,11 @@ nav {
   color: #4d4d4d;
   font-size: 1.2rem;
 } */
-
+.fbtn {
+  /* padding: 20px; */
+  margin: 15px;
+  width: 80%;
+}
 .form-el {
   border: none;
   outline: none;
