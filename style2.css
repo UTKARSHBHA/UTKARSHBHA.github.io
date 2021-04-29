@@ -849,4 +849,8 @@ i {
   .container p {
     width: 100%;
   }
+  .skill-pic img {
+    width: 50px;
+    /* height: 120px; */
+  }
 }

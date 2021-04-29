@@ -15,3 +15,6 @@ hamburger.addEventListener('click', ()=>{
 
 
 // cerificates
+// $('.nav-links li a').click(function(){
+//     $(".nav-links").collapse('hide');
+// });
