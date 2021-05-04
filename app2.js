@@ -7,6 +7,7 @@ hamburger.addEventListener('click', ()=>{
     navLinks.classList.toggle("open");
     links.forEach(link => {
         link.classList.toggle("fade");
+        // link.classList.collapse("open");
     });
 
     //Hamburger Animation
@@ -15,6 +16,6 @@ hamburger.addEventListener('click', ()=>{
 
 
 // cerificates
-// $('.nav-links li a').click(function(){
-//     $(".nav-links").collapse('hide');
+// links.classList.click(function(){
+//     $(".nav-links").collapse('open');
 // });
