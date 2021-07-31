@@ -262,6 +262,9 @@ nav {
 .about-2 {
   padding-left: 182px;
 }
+.about-2 img {
+  border-radius: 100%;
+}
 /* .about h2 {
   font-size: 2.5rem;
 } */
